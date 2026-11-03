@@ -1,78 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro Quant Engine | Institutional Trading Algorithm</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdnjs.cloudflare.com/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>
-body {
-background-color: #0b0f19;
-color: #f3f4f6;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-.crypto-card {
-background: linear-gradient(145deg, #111827, #1f2937);
-border: 1px solid #374151;
-}
-.modal-bg {
-background-color: rgba(0, 0, 0, 0.85);
-backdrop-filter: blur(8px);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Quant Engine | Institutional Trading Algorithm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .crypto-card {
+            background: linear-gradient(145deg, #111827, #1f2937);
+            border: 1px solid #374151;
+        }
+        .modal-bg {
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+        }
+    </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
-<!-- Header / Navbar -->
-<header class="border-b border-gray-800 bg-gray-900/50 backdrop-blur sticky top-0 z-40">
-<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-<div class="flex items-center space-x-2">
-<i class="fa-solid fa-chart-line text-emerald-500 text-2xl"></i>
-<span class="font-bold text-xl tracking-wider text-white">QUANT<span class="text-emerald-500">PRO</span></span>
-</div>
-<button onclick="openModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-lg font-semibold transition text-sm">
-Buy with Crypto
-</button>
-</div>
-</header>
+    <!-- Header / Navbar -->
+    <header class="border-b border-gray-800 bg-gray-900/50 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-chart-line text-emerald-500 text-2xl"></i>
+                <span class="font-bold text-xl tracking-wider text-white">QUANT<span class="text-emerald-500">PRO</span></span>
+            </div>
+            <button onclick="openModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-lg font-semibold transition text-sm">
+                Buy with Crypto
+            </button>
+        </div>
+    </header>
 
-<!-- Main Hero Section -->
-<main class="max-w-4xl mx-auto px-4 py-12 text-center flex-grow">
-<div class="inline-block bg-emerald-500/10 text-emerald-400 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase mb-6 border border-emerald-500/20">
-Institutional Precision Trading
-</div>
+    <!-- Main Hero Section -->
+    <main class="max-w-4xl mx-auto px-4 py-12 text-center flex-grow">
+        <div class="inline-block bg-emerald-500/10 text-emerald-400 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase mb-6 border border-emerald-500/20">
+            Institutional Precision Trading
+        </div>
 
-<h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-Dominate Markets with <span class="text-emerald-400">Quantitative Algorithms</span>
-</h1>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Dominate Markets with <span class="text-emerald-400">Quantitative Algorithms</span>
+        </h1>
 
-<p class="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-Get an edge with order flow and liquidity execution models. No recurring fees — lifetime access delivered directly via P2P crypto transaction.
-</p>
+        <p class="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Get an edge with order flow and liquidity execution models. No recurring fees — lifetime access delivered directly via P2P crypto transaction.
+        </p>
 
-<!-- CTA Box -->
-<div class="crypto-card p-6 md:p-8 rounded-2xl max-w-xl mx-auto shadow-2xl mb-12">
-<div class="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
-<div>
-<h3 class="text-xl font-bold text-white text-left">Pro Quant Engine</h3>
-<p class="text-sm text-gray-400 text-left">Lifetime Single-User License</p>
-</div>
-<div class="text-right">
-<span class="text-3xl font-extrabold text-white">$299</span>
-<span class="text-xs text-gray-400 block">USD (Pay in Crypto)</span>
-</div>
-</div>
+        <!-- CTA Box -->
+        <div class="crypto-card p-6 md:p-8 rounded-2xl max-w-xl mx-auto shadow-2xl mb-12">
+            <div class="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white text-left">Pro Quant Engine</h3>
+                    <p class="text-sm text-gray-400 text-left">Lifetime Single-User License</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-3xl font-extrabold text-white">$299</span>
+                    <span class="text-xs text-gray-400 block">USD (Pay in Crypto)</span>
+                </div>
+            </div>
 
-<ul class="text-left space-y-3 text-sm text-gray-300 mb-6">
-<li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Lifetime access & updates included</li>
-<li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Compatible with TradingView & MetaTrader</li>
-<li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Direct digital delivery in max 24 hours</li>
-<li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> No monthly subscriptions or hidden costs</li>
-</ul>
+            <ul class="text-left space-y-3 text-sm text-gray-300 mb-6">
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Lifetime access & updates included</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Compatible with TradingView & MetaTrader</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Direct digital delivery in max 24 hours</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> No monthly subscriptions or hidden costs</li>
+            </ul>
 
-<button onclick="openModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-emerald-500/20">
-Get Lifetime Access Now
-</button>
-<p class="
+            <button onclick="openModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-emerald-500/20">
+                Get Lifetime Access Now
+            </button>
+            <p class="text-xs text-gray-500 mt-3"><i class="fa-solid fa-shield-halved mr-1"></i> Peer-to-Peer Blockchain Settlement</p>
+        </div>
 
+        <!-- Problem / Solution -->
+        <div class="grid md:grid-cols-3 gap-6 text-left my-16">
+            <div class="bg-gray-900/60 p-6 rounded-xl border border-gray-800">
+                <i class="fa-solid fa-bolt text-emerald-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-white text-lg mb-2">Real-Time Liquidity</h4>
+                <p class="text-gray-400 text-sm">Track institutional order flow zones before price moves occur.</p>
+            </div>
+            <div class="bg-gray-900/60 p-6 rounded-xl border border-gray-800">
+                <i class="fa-solid fa-key text-emerald-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-white text-lg mb-2">100% Ownership</h4>
+                <p class="text-gray-400 text-sm">Pay once in crypto. Own your trading tools forever without recurring fees.</p>
+            </div>
+            <div class="bg-gray-900/60 p-6 rounded-xl border border-gray-800">
+                <i class="fa-solid fa-clock text-emerald-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-white text-lg mb-2">24h Guaranteed Delivery</h4>
+                <p class="text-gray-400 text-sm">Product files and documentation delivered to your email within 24 hours.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="hidden fixed inset-0 z-50 modal-bg flex items-center justify-center p-4">
+        <div class="crypto-card max-w-md w-full p-6 rounded-2xl relative shadow-2xl">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <h3 class="text-xl font-bold text-white mb-1">Pay with Crypto</h3>
+            <p class="text-xs text-gray-400 mb-6">Select currency, send exact amount, and confirm.</p>
+
+            <!-- Currency Selector -->
+            <div class="mb-4">
+                <label class="block text-xs font-semibold text-gray-400 uppercase mb-2">1. Select Network / Asset</label>
+                <div class="grid grid-cols-3 gap-2">
+                    <button type="button" onclick="selectCrypto('ETH')" id="btn-ETH" class="crypto-btn border border-emerald-500 bg-emerald-500/10 text-white py-2 rounded-lg text-sm font-medium">ETH / USDT</button>
+                    <button type="button" onclick="selectCrypto('BTC')" id="btn-BTC" class="crypto-btn border border-gray-700 bg-gray-800 text-gray-300 py-2 rounded-lg text-sm font-medium">Bitcoin</button>
+                    <button type="button" onclick="selectCrypto('SOL')" id="btn-SOL" class="crypto-btn border border-gray-700 bg-gray-800 text-gray-300 py-2 rounded-lg text-sm font-medium">Solana</button>
+                </div>
+            </div>
+
+            <!-- Wallet Address Field -->
+            <div class="mb-6">
+                <label class="block text-xs font-semibold text-gray-400 uppercase mb-2">2. Send Payment To This Address</label>
+                <div class="bg-gray-950 p-3 rounded-lg border border-gray-800 flex items-center justify-between">
+                    <span id="walletAddress" class="text-xs text-emerald-400 font-mono break-all pr-2">0xe9bB36141B13eD27060f3C6Bb18b74bf899F0EeF</span>
+                    <button type="button" onclick="copyWallet()" class="bg-gray-800 hover:bg-gray-700 text-white text-xs px-3 py-1.5 rounded transition shrink-0">
+                        <i class="fa-regular fa-copy mr-1"></i> Copy
+                    </button>
+                </div>
+                <p id="copyAlert" class="text-emerald-400 text-xs mt-1 hidden"><i class="fa-solid fa-check mr-1"></i> Address copied to clipboard!</p>
+            </div>
+
+            <!-- Instruction Box -->
+            <div class="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 mb-6">
+                <p class="text-xs text-amber-300">
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> <b>Important:</b> After transferring from your wallet, click the button below to notify us via email. Your access will be delivered within <b>24 hours</b>.
+                </p>
+            </div>
+
+            <!-- Confirm Action -->
+            <a id="emailLink" href="mailto:wordgames@gmail.com?subject=Crypto%20Payment%20Confirmation%20-%20Pro%20Quant%20Engine&body=Hi%2C%20I%20have%20completed%20the%20crypto%20payment%20for%20Pro%20Quant%20Engine.%20Please%20deliver%20the%20product%20files%20to%20this%20email%20address." 
+               class="block w-full text-center bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-bold py-3 rounded-xl transition">
+                <i class="fa-regular fa-envelope mr-2"></i> Confirm Payment & Send Email
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500">
+        <p>&copy; 2026 QuantPro Research. All rights reserved. Self-custodial digital product delivery.</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+        const wallets = {
+            ETH: "0xe9bB36141B13eD27060f3C6Bb18b74bf899F0EeF",
+            BTC: "bc1qw5aerfr0dkhkxa47zrx2w3cusmt96kugrjdrdm",
+            SOL: "Gk4XaV7Z1C7fsMGipnjzrwQK1gzVDuKR7JZeT9zAgMiB"
+        };
+
+        let currentAsset = "ETH";
+
+        function openModal() {
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function selectCrypto(asset) {
+            currentAsset = asset;
+            document.getElementById('walletAddress').innerText = wallets[asset];
+
+            document.querySelectorAll('.crypto-btn').forEach(btn => {
+                btn.className = "crypto-btn border border-gray-700 bg-gray-800 text-gray-300 py-2 rounded-lg text-sm font-medium";
+            });
+            document.getElementById('btn-' + asset).className = "crypto-btn border border-emerald-500 bg-emerald-500/10 text-white py-2 rounded-lg text-sm font-medium";
+
+            const email = "wordgames@gmail.com";
+            const subject = encodeURIComponent("Crypto Payment Confirmation - Pro Quant Engine");
+            const body = encodeURIComponent(`Hi,\n\nI have completed the ${asset} payment for the Pro Quant Engine.\n\nPlease deliver the product files to this email address within 24 hours.\n\nThank you!`);
+            document.getElementById('emailLink').href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
+
+        function copyWallet() {
+            const address = wallets[currentAsset];
+            navigator.clipboard.writeText(address).then(() => {
+                const alert = document.getElementById('copyAlert');
+                alert.classList.remove('hidden');
+                setTimeout(() => alert.classList.add('hidden'), 3000);
+            }).catch(() => {
+                alert("Copied: " + address);
+            });
+        }
+    </script>
+</body>
+</html>
