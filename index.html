@@ -22,14 +22,19 @@
             background-color: #0b0f19;
             color: #f3f4f6;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            /* Fundo com a arte oficial do GTA VI redimensionada e camada escura translúcida para leitura perfeita */
-            background-image: linear-gradient(rgba(11, 15, 25, 0.90), rgba(11, 15, 25, 0.95)), url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        }
+        .bg-fixed-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -10;
+            filter: brightness(0.35);
         }
         .crypto-card {
-            background: linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.92), rgba(31, 41, 55, 0.92));
             border: 1px solid #374151;
             backdrop-filter: blur(10px);
         }
@@ -39,7 +44,10 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between relative">
+
+    <!-- Imagem de Fundo Fixa -->
+    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1920&auto=format&fit=crop" class="bg-fixed-img" alt="Background">
 
     <!-- Header / Navbar -->
     <header class="border-b border-gray-800 bg-gray-900/80 backdrop-blur sticky top-0 z-40">
@@ -55,7 +63,7 @@
     </header>
 
     <!-- Main Hero Section -->
-    <main class="max-w-4xl mx-auto px-4 py-12 text-center flex-grow">
+    <main class="max-w-4xl mx-auto px-4 py-12 text-center flex-grow z-10">
         <div class="inline-block bg-pink-500/10 text-pink-400 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase mb-6 border border-pink-500/20">
             Official PC Release — November 19, 2026
         </div>
@@ -163,7 +171,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500">
+    <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500 z-10">
         <p>&copy; 2026 GameWorld Store. All rights reserved. Self-custodial digital product delivery.</p>
     </footer>
 
